@@ -1,0 +1,92 @@
+* {
+  font-family: 'Work Sans', sans-serif;
+}
+
+#complete {
+  border-radius: 80px;
+  border: 1px solid #6231EC;
+  width: 25%;
+  min-height: 350px;
+  min-width: 500px;
+  color: #818181;
+  text-align: center;
+  padding: 10px 25px;
+}
+
+#white {
+  min-height: 500px;
+  background-color: white;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 5%;
+}
+
+#possAns {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  position: relative;
+  text-align: left;
+  margin-bottom: 25px;
+  padding: 15px 65px 15px 80px;
+  width: 70%;
+  color: #6231EC;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 5px 19px rgba(42, 43, 104, 0.2);
+          box-shadow: 0px 5px 19px rgba(42, 43, 104, 0.2);
+  display: none;
+  z-index: -1;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+p:before {
+  content: '';
+  width: 22px;
+  height: 22px;
+  border-radius: 18px;
+  border: 2px solid #6231EC;
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.animacion {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  display: block;
+}
+
+.correctAns::before {
+  border-radius: 50%;
+  background-color: #6231EC;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    top: 500px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slidein {
+  from {
+    top: 500px;
+  }
+  to {
+    top: 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

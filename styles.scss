@@ -1,0 +1,87 @@
+
+$mainColor: #6231EC;
+$secColor: #818181;
+
+@mixin fontStyle($size, $weight){
+  font-size: $size;
+  font-weight: $weight;
+}
+
+*{
+  font-family: 'Work Sans', sans-serif;
+}
+
+#complete{
+  border-radius: 80px;
+  border: 1px solid $mainColor;
+  width: 25%;
+  min-height: 350px;
+  min-width: 500px;
+  color: $secColor;
+  text-align: center;
+  padding: 10px 25px;
+}
+
+#white{
+  min-height: 500px;
+  background-color: white;
+  width: 100vw;
+}
+
+h1{
+  @include fontStyle(20px, 600);
+  margin: 5%;
+}
+
+#possAns{
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  position: relative;
+  text-align: left;
+  margin-bottom: 25px;
+  padding: 15px 65px 15px 80px;
+  width: 70%;
+  color: $mainColor;
+  border-radius: 50px;
+  box-shadow: 0px 5px 19px rgba(42, 43, 104,0.2);
+  display: none;
+  z-index: -1;
+  @include  fontStyle(18px, 400);
+
+  &:before{
+    content: '';
+    width: 22px;
+    height: 22px;
+    border-radius: 18px;
+    border: 2px solid $mainColor;
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.animacion{
+  animation-duration: 3s;
+  animation-name: slidein;  
+  display: block;
+}
+
+.correctAns::before{
+  border-radius: 50%;
+  background-color: $mainColor;
+}
+
+
+  @keyframes slidein {
+    from {
+      top: 500px;
+    }
+  
+    to {
+      top: 0;
+    }
+  }
